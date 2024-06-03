@@ -119,13 +119,15 @@ def main(args):
     model_string_name = args.model.replace("/", "-")
     ckpt_string_name = os.path.basename(args.ckpt).replace(".pt", "") if args.ckpt else "pretrained"
     if args.accelerate_method is not None and 'dynamiclayer' in args.accelerate_method:
-        router_name = args.path.split('/')[1] + '-' + args.path.split('/')[2].split('.')[0]
+        router_name = args.path.split('/')[1].split('.')[0]
         folder_name = f"router-{router_name}-thres-{args.thres}-accelerate-{args.accelerate_method}-size-{args.image_size}-vae-{args.vae}-ddim-{args.ddim_sample}-" \
                       f"steps-{args.num_sampling_steps}-cfg-{args.cfg_scale}-seed-{args.global_seed}"
     else:
         folder_name = f"{model_string_name}-{ckpt_string_name}-size-{args.image_size}-vae-{args.vae}-psampler-{args.p_sample}-ddim-{args.ddim_sample}-" \
                   f"steps-{args.num_sampling_steps}-accelerate-{args.accelerate_method}-cfg-{args.cfg_scale}-seed-{args.global_seed}"
     sample_folder_dir = f"{args.sample_dir}/{folder_name}"
+
+    os.makedirs(f"{args.sample_dir}", exist_ok=True)
     if rank == 0 and args.save_to_disk:
         os.makedirs(sample_folder_dir, exist_ok=True)
         print(f"Saving .png samples at {sample_folder_dir}")

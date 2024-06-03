@@ -1,3 +1,7 @@
 pretrained_models/
 *.png
 __pycache__
+*.pb
+samples/
+results/
+wandb/
