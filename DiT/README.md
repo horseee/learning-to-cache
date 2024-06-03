@@ -17,12 +17,12 @@ For DDIM-50:
 ```
 python sample.py --model DiT-XL/2 --num-sampling-steps 50 --ddim-sample --accelerate-method dynamiclayer --path ckpt/DDIM50_router.pt --thres 0.1
 ```
-The code would repeat the generation for 5 times. We use it to avoid the fluctuations in the inference time. If you want to see the images without acceleartion, you can use the follwing command:
+The code would repeat the generation for 5 times to avoid the fluctuations in the inference time. If you want to see the images without acceleration, you can use the follwing command:
 ```
 python sample.py --model DiT-XL/2 --num-sampling-steps 20 --ddim-sample 
 ```
 
-## Sample 50k images for ImageNet
+## Sample 50k images for Evaluation
 If you want to reproduce the FID results from the paper, you can use the following command to sample 50k images:
 ```
 torchrun --nnodes=1 --nproc_per_node=8 --master_port 12345 sample_ddp.py --model DiT-XL/2 --num-sampling-steps NUM_STEPS --ddim-sample --accelerate-method dynamiclayer --path PATH_TO_TRAINED_ROUTER --thres 0.1
@@ -53,7 +53,7 @@ torchrun --nnodes=1 --nproc_per_node=8 --master_port 12345 train_router.py --mod
 The checkpoint for the router would be saved in `results/XXX-DiT-XL-2/checkpoints`. You can also observe the changes in the router during the learning process on wandb.
 
 <div align="center">
-  <img src="assets/router.gif" width="90%" ></img>
+  <img src="assets/router.gif" width="70%" ></img>
   <br>
   <em>
       (Changes in the router during training) 
@@ -61,7 +61,6 @@ The checkpoint for the router would be saved in `results/XXX-DiT-XL-2/checkpoint
 </div>
 
 
-
 ## Acknowledgement
-The code here is largely based on the implementation of [DiT](https://github.com/facebookresearch/DiT). 
+This implementation is based on [DiT](https://github.com/facebookresearch/DiT). 
 

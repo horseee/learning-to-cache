@@ -1,0 +1,6 @@
+__pycache__
+assets/fid_stats/*.npz
+assets/stable-diffusion/*.pth
+imagenet256_uvit_huge.pth
+samples
+*.png
