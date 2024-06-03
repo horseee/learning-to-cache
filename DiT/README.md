@@ -14,7 +14,9 @@ The code would automatically download the pretrained DiT-XL model. Ideally the t
 
 
 ## Sample Image
-
+```
+python sample.py --model DiT-XL/2 --num-sampling-steps 50 --ddim-sample --accelerate-method dynamiclayer --path ckpt/DDIM50_router.pt --thres 0.1
+```
 
 ## Evaluate FID on ImageNet
 Put the above path into the following command to sample images.
