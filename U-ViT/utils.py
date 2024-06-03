@@ -198,7 +198,7 @@ def sample2dir(accelerator, path, n_samples, mini_batch_size, sample_fn, unprepr
         accelerator.wait_for_everyone()
 
 def sample2npz(accelerator, path, n_samples, mini_batch_size, sample_fn, unpreprocess_fn=None, reset_fn=None):
-    os.makedirs(path, exist_ok=True)
+    #os.makedirs(path, exist_ok=True)
     idx = 0
     batch_size = mini_batch_size * accelerator.num_processes
 

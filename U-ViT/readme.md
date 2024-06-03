@@ -49,7 +49,7 @@ Results:
 | NFE | Router | FID | 
 | -- | -- | -- | 
 | 50 | - | 2.3728 | 
-| 50 | ckpt/dpm50_router.pth |  |
+| 50 | ckpt/dpm50_router.pth | 2.3625 |
 | 20 | - | 2.5739 | 
 | 20 | ckpt/dpm20_router.pth |  2.5809|
 
@@ -57,7 +57,7 @@ Results:
 ## Train the router
 Execute the following command to train the router:
 ```
-accelerate launch --multi_gpu --main_process_port 18100 --num_processes 8 --mixed_precision fp16 train_router_discrete.py --config=configs/imagenet256_uvit_huge_router.py --config.dataset.path=PATH_TO_IMAGENET   --nnet_path=imagenet256_uvit_huge.pth --nfe=20 --router_lr=0.001 --l1_weight=0.1 --workdir=workdir/uvit_router_0.1
+accelerate launch --multi_gpu --main_process_port 18100 --num_processes 8 --mixed_precision fp16 train_router_discrete.py --config=configs/imagenet256_uvit_huge_router.py --config.dataset.path=PATH_TO_IMAGENET   --nnet_path=imagenet256_uvit_huge.pth --nfe=20 --router_lr=0.001 --l1_weight=0.1 --workdir=workdir/uvit_router_l1_0.1
 ```
 Change `PATH_TO_IMAGENET` to your path to the imagenet dataset.
 
