@@ -56,7 +56,7 @@ The checkpoint for the router would be saved in `results/XXX-DiT-XL-2/checkpoint
   <img src="assets/router.gif" width="90%" ></img>
   <br>
   <em>
-      (1.7x acceleration of SVD-XT) 
+      (Changes in the router during training) 
   </em>
 </div>
 
