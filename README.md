@@ -24,16 +24,28 @@
 ## Introduction
 We introduce a novel scheme, named **L**earning-to-**C**ache (L2C), that learns to conduct caching in a dynamic manner for diffusion transformers.
 
-Results:
+Some takeaways:
 
-1. A large proportion of layers in the diffusion transformer can be removed even without updating the model parameters. In the case of U-ViT-H/2, for example, we may remove up to 93.68% of the computation in the cache steps (46.84% for all steps), with less than 0.01 drop in FID. 
+1. A large proportion of layers in the diffusion transformer can be removed, without updating the model parameters.
+   - In U-ViT-H/2, up to 93.68% of the layers in the cache steps (46.84% for all steps) can be removed, with less than 0.01 drop in FID. 
 
-2. Experimental results show that L2C largely outperforms samplers such as DDIM and DPM-Solver, alongside prior cache-based methods at the same inference speed. 
+2. L2C largely outperforms samplers such as DDIM and DPM-Solver. 
+
+## Checkpoint for Routers
+| Model | NFE | Checkpoint |
+| -- | -- | -- |
+| DiT-XL/2 |  50 | [link](DiT/ckpt/DDIM50_router.pt) |
+| DiT-XL/2 |  20 | [link](DiT/ckpt/DDIM20_router.pt) |
+| U-ViT-H/2 |  50 | [link](U-ViT/ckpt/dpm50_router.pth) |
+| U-ViT-H/2 |  20 | [link](U-ViT/ckpt/dpm20_router.pth)|
 
 ## Code
-We implement Learning-to-Cache on two basic structures: DiT and U-ViT. Check the code below for instruction:
+We implement Learning-to-Cache on two basic structures: DiT and U-ViT. Check the instructions below:
 
 1. DiT: [README](https://github.com/horseee/learning-to-cache/tree/main/DiT#learning-to-cache-for-dit)
 2. U-ViT: [README](https://github.com/horseee/learning-to-cache/blob/main/U-ViT/readme.md)
 
 ## Citation
+```
+TBD
+```
