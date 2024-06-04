@@ -53,7 +53,7 @@ torchrun --nnodes=1 --nproc_per_node=8 --master_port 12345 train_router.py --mod
 The checkpoint for the router would be saved in `results/XXX-DiT-XL-2/checkpoints`. You can also observe the changes in the router during the learning process on wandb.
 
 <div align="center">
-  <img src="assets/router.gif" width="70%" ></img>
+  <img src="assets/dit.gif" width="70%" ></img>
   <br>
   <em>
       (Changes in the router during training) 

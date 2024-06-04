@@ -4,3 +4,4 @@ assets/stable-diffusion/*.pth
 imagenet256_uvit_huge.pth
 samples
 *.png
+workdir
