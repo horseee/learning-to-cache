@@ -14,10 +14,10 @@
 
 
 <div align="center">
-  <img src="U-ViT/u-vit.gif" width="30%" ></img>
+  <img src="U-ViT/u-vit.gif" width="40%" ></img>
   <br>
   <em>
-      (Changes in the router during training) 
+      (Changes in the router for U-ViT during training) 
   </em>
 </div>
 
