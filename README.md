@@ -31,6 +31,15 @@ Some takeaways:
 
 2. L2C largely outperforms samplers such as DDIM and DPM-Solver. 
 
+<div align="center">
+  <img src="assets/dit_baseline.png" width="40%" ></img>
+  <img src="assets/uvit_baseline.png" width="40%" ></img>
+  <br>
+  <em>
+      (Comparison with Baselines. Left: DiT-XL/2. Right: U-ViT-H/2)
+  </em>
+</div>
+
 ## Checkpoint for Routers
 | Model | NFE | Checkpoint |
 | -- | -- | -- |
