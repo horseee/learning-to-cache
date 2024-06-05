@@ -13,16 +13,19 @@
 > [Learning and Vision Lab](http://lv-nus.org/), National University of Singapore, Huawei Technologies Ltd  
 
 
+
+
+## Introduction
+We introduce a novel scheme, named **L**earning-to-**C**ache (L2C), that learns to conduct caching in a dynamic manner for diffusion transformers. A router is optimized to decide the layers to be cached. 
+
 <div align="center">
   <img src="U-ViT/u-vit.gif" width="40%" ></img>
   <br>
   <em>
-      (Changes in the router for U-ViT during training) 
+      (Changes in the router for U-ViT when optimizing) 
   </em>
 </div>
 
-## Introduction
-We introduce a novel scheme, named **L**earning-to-**C**ache (L2C), that learns to conduct caching in a dynamic manner for diffusion transformers.
 
 Some takeaways:
 
