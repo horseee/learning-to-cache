@@ -56,5 +56,12 @@ We implement Learning-to-Cache on two basic structures: DiT and U-ViT. Check the
 
 ## Citation
 ```
-TBD
+@misc{ma2024learningtocache,
+      title={Learning-to-Cache: Accelerating Diffusion Transformer via Layer Caching}, 
+      author={Xinyin Ma and Gongfan Fang and Michael Bi Mi and Xinchao Wang},
+      year={2024},
+      eprint={2406.01733},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
 ```
