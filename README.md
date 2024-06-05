@@ -8,7 +8,7 @@
 </div>
 <br>
 
-> **Learning-to-Cache: Accelerating Diffusion Transformer via Layer Caching**   🥯[[Arxiv]]()    
+> **Learning-to-Cache: Accelerating Diffusion Transformer via Layer Caching**   🥯[[Arxiv]](https://arxiv.org/abs/2406.01733)    
 > [Xinyin Ma](https://horseee.github.io/), [Gongfan Fang](https://fangggf.github.io/), [Michael Bi Mi](), [Xinchao Wang](https://sites.google.com/site/sitexinchaowang/)   
 > [Learning and Vision Lab](http://lv-nus.org/), National University of Singapore, Huawei Technologies Ltd  
 
