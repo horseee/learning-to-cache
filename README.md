@@ -22,7 +22,7 @@ We introduce a novel scheme, named **L**earning-to-**C**ache (L2C), that learns 
   <img src="U-ViT/u-vit.gif" width="40%" ></img>
   <br>
   <em>
-      (Changes in the router for U-ViT when optimizing) 
+      (Changes in the router for U-ViT when optimizing across different layers (x-axis) over all steps (y-axis). The white indicates the layer is activated, while the black indicates it is disabled.) 
   </em>
 </div>
 
