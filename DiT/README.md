@@ -48,7 +48,7 @@ Results:
 ## Training
 Here is the command for training the router. Make sure you change the PATH_TO_IMAGENET_TRAIN to your path for the training set of ImageNet. 
 ```
-torchrun --nnodes=1 --nproc_per_node=8 --master_port 12345 train_router.py --model DiT-XL/2 --data-path PATH_TO_IMAGENET_TRAIN --global-batch-size 64 --image-size 256 --ckpt-every 1000 --l1 5e-6 --lr 0.01 --wandb
+torchrun --nnodes=1 --nproc_per_node=8 --master_port 12345 train_router.py --model DiT-XL/2 --data-path PATH_TO_IMAGENET_TRAIN --global-batch-size 64 --image-size 256 --ckpt-every 1000 --l1 5e-6 --lr 0.001 --wandb
 ```
 The checkpoint for the router would be saved in `results/XXX-DiT-XL-2/checkpoints`. You can also observe the changes in the router during the learning process on wandb.
 
@@ -59,6 +59,17 @@ The checkpoint for the router would be saved in `results/XXX-DiT-XL-2/checkpoint
       (Changes in the router during training) 
   </em>
 </div>
+
+* Hyperoarameters for Reproducing the results:
+| Model ｜ DiT-XL/2 |  DiT-XL/2 |  DiT-XL/2 |  DiT-XL/2 |  DiT-L/2 | DiT-L/2 |
+| -- | -- | -- | -- | -- |  -- | -- | -- | 
+| NFE   | 50 | 20 | 10 | 50 | 50 | 20 |
+| Resolution | 256 | 256 | 256 | 512 | 256 | 256 |
+| -- | -- | -- | -- | -- |  -- | -- | -- |
+| \lambda (--l1) | 1e-6 | 5e-6 | 1e-6 | 5e-6 | 1e-6 | 5e-6 |
+| \theta (--thres) | 0.1 | 0.1 | 0.1 | 0.9 | 0.1 | 0.1 | 0.1 |
+| learning rate (--lr) |  1e-3 ｜ 1e-3 | 1e-3 | 1e-3 | 1e-3 | 1e-2 |
+
 
 
 ## Acknowledgement
