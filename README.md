@@ -27,7 +27,7 @@ We introduce a novel scheme, named **L**earning-to-**C**ache (L2C), that learns 
 </div>
 
 
-Some takeaways:
+**Some takeaways**:
 
 1. A large proportion of layers in the diffusion transformer can be removed, without updating the model parameters.
    - In U-ViT-H/2, up to 93.68% of the layers in the cache steps (46.84% for all steps) can be removed, with less than 0.01 drop in FID. 
