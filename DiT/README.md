@@ -60,15 +60,18 @@ The checkpoint for the router would be saved in `results/XXX-DiT-XL-2/checkpoint
   </em>
 </div>
 
-* Hyperoarameters for Reproducing the results:
-| Model ｜ DiT-XL/2 |  DiT-XL/2 |  DiT-XL/2 |  DiT-XL/2 |  DiT-L/2 | DiT-L/2 |
-| -- | -- | -- | -- | -- |  -- | -- | -- | 
-| NFE   | 50 | 20 | 10 | 50 | 50 | 20 |
+* Hyperoarameters for training the routers:
+
+| Model | DiT-XL/2 | DiT-XL/2 | DiT-XL/2 | DiT-XL/2 |  DiT-L/2 |  DiT-L/2 | 
+| -- | -- | -- | -- | -- |  -- | -- |
+| NFE   | 50         | 20       | 10        | 50        | 50       | 20   |
 | Resolution | 256 | 256 | 256 | 512 | 256 | 256 |
-| -- | -- | -- | -- | -- |  -- | -- | -- |
+| - For Train | | | | | | 
 | \lambda (--l1) | 1e-6 | 5e-6 | 1e-6 | 5e-6 | 1e-6 | 5e-6 |
+| learning rate (--lr) |  1e-3 | 1e-3 | 1e-3 | 1e-3 | 1e-3 | 1e-2 |
+| - For Inference | | | | | | 
 | \theta (--thres) | 0.1 | 0.1 | 0.1 | 0.9 | 0.1 | 0.1 | 0.1 |
-| learning rate (--lr) |  1e-3 ｜ 1e-3 | 1e-3 | 1e-3 | 1e-3 | 1e-2 |
+
 
 
 
